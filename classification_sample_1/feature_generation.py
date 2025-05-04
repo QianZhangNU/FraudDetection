@@ -42,7 +42,7 @@ class generate_zscore_transformer():
 
     def generate_zscore(self, X, ref_id, comb_id):
         fea_name = ref_id + '_' + comb_id + '_zscore'
-        X[fea_name] = X.groupby(comb_id)[ref_id].transform(lambda x: round(zscore(x, ddof=0), 2))
+        X[fea_name] = X.groupby(comb_id)[ref_id].transform(lambda x: round(zscore(x, ddof=1)))
         X[fea_name].fillna(0, inplace=True)
         return X
 
