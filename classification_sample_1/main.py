@@ -29,7 +29,7 @@ def anomaly_detection_pipeline(date_of_year):
         logging.info("Step 2: Save the raw data")
         df_mix_f_org.to_parquet('res_raw_data_' + date_of_year + '.parquet')
 
-        # Step 3: Initiate the rerun pipeline
+        # Step 3: Process the data
         logging.info("Step 3: Data Processing")
         start_time = datetime(int(date_of_year[-4:]), int(date_of_year[:2]), int(date_of_year[2:4]))
         end_time = start_time + timedelta(days=1)
@@ -60,10 +60,10 @@ def anomaly_detection_pipeline(date_of_year):
         logging.info("Step 7: Save the prediction")
         X_test.to_parquet("AM_result_" + date_of_year + ".parquet")
 
-        logging.info("Anomaly detection completed successfully.")
+        logging.info("Fraudulant detection completed successfully.")
 
     except Exception as e:
-        logging.error(f"An error occurred in anomaly detection: {e}")
+        logging.error(f"An error occurred in fraudulant detection: {e}")
 
     time.sleep(1)
 
