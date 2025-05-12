@@ -1,10 +1,7 @@
 
-![logo](fig/fraud.png)
-
 # Introduction:
 
-The essential challenges of fraudulent detection is imbalance dataset and domain related and complicated feature engineering, specific features, such as transaction between two locations (the figure in the following shows transaction frequency between sender and benificial parties).
+The key challenges in fraud detection include highly imbalanced datasets and the need for complex, domain-specific feature engineering. For example, features such as transaction frequency between two locations (as illustrated in the figure below showing interactions between sender and beneficiary) can be critical. This repository provides a collection of commonly used feature generation methods, feature engineering techniques, and model training workflows, all streamlined to support the end-to-end pipeline for fraud detection problems.
 
 ![logo](fig/geo_pic.png)
 
-This repo packed some commonly used feature generation, feature engineering, model training and streamline the production pipeline in fraudulent detection problems.
